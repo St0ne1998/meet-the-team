@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khreor Fashion | About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --accent-gold: #c5a059;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --gray: #777777;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Jost', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--primary-dark);
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid #eaeaea;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-area {
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: var(--primary-dark);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .back-store-btn {
+            background: transparent;
+            color: var(--primary-dark);
+            border: 1px solid var(--primary-dark);
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .back-store-btn:hover {
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1600&auto=format&fit=crop') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 70px 15px;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #e0e0e0;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Leadership Section */
+        .leadership-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .leadership-intro {
+            text-align: center;
+            color: var(--gray);
+            font-size: 1rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media(min-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero { padding: 90px 20px; }
+            .hero h1 { font-size: 2.8rem; }
+            .logo-area { font-size: 1.2rem; }
+        }
+
+        .team-card {
+            background: var(--white);
+            padding: 35px 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-gold);
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        /* Round Box Profile Images */
+        .profile-img-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent-gold);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-card h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: var(--primary-dark);
+        }
+
+        .team-card .role {
+            color: var(--accent-gold);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .team-card .age {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="https://www.khreorfashion.store" class="logo-area">
+            KHREOR FASHION
+        </a>
+        <a href="https://www.khreorfashion.store" class="back-store-btn">← Back to Store</a>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>About Khreor Fashion</h1>
+        <p>Discover the leadership and vision behind our brand.</p>
+    </section>
+
+    <div class="container">
+
+        <!-- Leadership Team Section -->
+        <h2 class="leadership-title">Meet Our Team</h2>
+        <p class="leadership-intro">Our dedicated leadership team brings together creative vision, experience, and strategic execution to build an exceptional fashion marketplace experience.</p>
+        
+        <div class="team-grid">
+            
+            <!-- Emeline Moonsamy - CEO -->
+            <div class="team-card">
+                <div class="profile-img-container">
+                    <img src="3f01bb1c-afdd-4fe6-b20a-38ecee27babb.JPG" alt="Emeline Moonsamy">
+                </div>
+                <h3>Emeline Moonsamy[cite: 1]</h3>
+                <div class="role">CEO[cite: 1]</div>
+                <div class="age">52 Years Old[cite: 1]</div>
+            </div>
+
+            <!-- Caleb Moonsamy - CFO -->
+            <div class="team-card">
+                <div class="profile-img-container">
+                    <img src="f1dd7e9c-677c-4805-b31c-add0f812dc33.JPG" alt="Caleb Moonsamy">
+                </div>
+                <h3>Caleb Moonsamy[cite: 1]</h3>
+                <div class="role">CFO[cite: 1]</div>
+                <div class="age">22 Years Old[cite: 1]</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Khreor Fashion Store. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
